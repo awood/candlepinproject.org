@@ -2,7 +2,7 @@ language: ruby
 rvm:
 - 1.9.3
 script: ./_travis/build
-bundler_args: --without development
+bundler_args: --without development --deployment
 before_deploy: ./_travis pre_deploy
 deploy:
   provider: openshift
