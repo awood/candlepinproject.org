@@ -3,7 +3,9 @@ rvm:
 - 2.0.0
 script: ./_travis/build
 bundler_args: --without development --deployment
-before_deploy: ./_travis/pre_deploy
+before_deploy: 
+  - ./_travis/pre_deploy
+  - git config --global push.default simple
 deploy:
   provider: openshift
   user: candlepinproject
@@ -16,3 +18,4 @@ deploy:
   domain: candlepinproject
   on:
     repo: candlepin/candlepinproject.org
+  skip_cleanup: true
