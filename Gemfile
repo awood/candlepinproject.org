@@ -1,12 +1,7 @@
 # Use the OpenShift gem mirror
 # See http://openshift.github.io/documentation/oo_cartridge_guide.html#ruby-mirror
 source 'https://rubygems.org'
-ruby '1.9.3'
-
-# rack-jekyll fails to install under US_ASCII which is what the Jenkins slaves are
-# set to.
-Encoding.default_external=Encoding::UTF_8
-Encoding.default_internal=Encoding::UTF_8
+ruby '2.0.0'
 
 gem 'git', "~> 1.2"
 gem 'typogruby', "~> 1.0"

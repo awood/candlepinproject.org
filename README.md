@@ -2,9 +2,8 @@
 
 # Getting Started
 1. `yum install nodejs python-pygments ruby-devel libyaml libxslt-devel`
-1. Install RVM. Yes, I know RVM can be a pain when you first start using it, but OpenShift uses Ruby 1.9.3
-   and the fact is there are some small compatibility issues between 2.0.0 and 1.9.3. Note: do **NOT** install
-   RVM as root.
+1. Install RVM. Yes, I know RVM can be a pain when you first start using it, but it provides a good
+   separation between conflicting gems.
 
    First you must configure your terminal emulator to act as a login shell.  In gnome-terminal,
    go to "Edit -> Profile Preferences -> Title and Command".  Check the box reading
@@ -14,14 +13,14 @@
    Start a new terminal and run the following:
 
    ```
-   $ curl -sSL https://get.rvm.io | bash -s stable --ruby=ruby-1.9.3-p545 --ruby=ruby-2.0.0-p353 --with-gems=rhc
+   $ curl -sSL https://get.rvm.io | bash -s stable --ruby=ruby-2.0.0-p353 --with-gems=rhc
    # The command below will insure that when you install subsequent Ruby versions, the 'rhc' gem will be installed.
    $ echo "rhc" >> ~/.rvm/gemsets/global.gems
    $ rvm --default use 2.0.0-p353
    ```
 
    With these settings, RVM will use Ruby 2.0.0 as a default.  However, when you `cd` to the website directory
-   RVM will detect the .ruby-version and .ruby-gemset files and switch to Ruby 1.9.3 and the candlepinproject.org
+   RVM will detect the .ruby-version and .ruby-gemset files and switch to the candlepinproject.org
    gemset.  The documentation from RVM is extensive so don't be afraid to read it.
 1. Go into your checkout directory and run `bundle install`
 1. Install and configure Travis.  This will allow you to interact with the continuous integration 
