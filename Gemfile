@@ -1,7 +1,6 @@
 # Use the OpenShift gem mirror
 # See http://openshift.github.io/documentation/oo_cartridge_guide.html#ruby-mirror
 source 'https://rubygems.org'
-ruby '2.0.0'
 
 gem 'git', "~> 1.2"
 gem 'typogruby', "~> 1.0"

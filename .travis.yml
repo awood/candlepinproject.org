@@ -1,11 +1,10 @@
 language: ruby
 rvm:
-- 2.0.0
+  - 2.0.0
 script: ./_travis/build
 bundler_args: --without development --deployment
-before_deploy: 
-  - ./_travis/pre_deploy
-  - git config --global push.default simple
+# before_deploy: 
+#   - git config --global push.default simple
 deploy:
   provider: openshift
   user: candlepinproject
