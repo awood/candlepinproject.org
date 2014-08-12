@@ -3,7 +3,7 @@ rvm:
 - 2.0.0
 script: ./_travis/build
 bundler_args: --without development --deployment
-before_deploy: ./_travis pre_deploy
+before_deploy: ./_travis/pre_deploy
 deploy:
   provider: openshift
   user: candlepinproject
